@@ -93,7 +93,7 @@ public abstract class Piece extends ReturnPiece{
                 for (int f = 0; f < 8; f++) {
                     Piece attackingPiece = board.board[r][f];
                     if (attackingPiece != null && attackingPiece.player != this.player) {
-                        // ✅ FIX: Simulate the move and check if the king is still safe
+                        // Simulate the move and check if the king is still safe
                         Piece originalPiece = board.board[targetRank][targetFile];
                         board.board[targetRank][targetFile] = this; // Temporarily move king
                         board.board[rank][file] = null; // Remove king from old position
