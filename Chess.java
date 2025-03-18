@@ -1,4 +1,4 @@
-// Toma Takamatsu, Amy Margolina
+// Amy Margolina, Toma Takamatsu
 
 package chess;
 
@@ -22,10 +22,6 @@ public class Chess {
 
 	public static ReturnPlay play(String move) {
 
-		/* FILL IN THIS METHOD */
-		
-		/* FOLLOWING LINE IS A PLACEHOLDER TO MAKE COMPILER HAPPY */
-		/* WHEN YOU FILL IN THIS METHOD, YOU NEED TO RETURN A ReturnPlay OBJECT */
 		ReturnPlay result = new ReturnPlay();
 		move = move.trim();
 		String[] parts = move.split(" ");
@@ -61,10 +57,9 @@ public class Chess {
 	
 	
 	/**
-	 * This method should reset the game, and start from scratch.
+	 * This method resets the game and starts from scratch.
 	 */
 	public static void start() {
-		/* FILL IN THIS METHOD */
 		chessBoard = new Board();
 	}
 }
