@@ -39,27 +39,19 @@ public class Rook extends Piece{
             currentFile += fileDirection;
         }        
 
-        // Checking if target is the same colored piece
-        // Piece target = board.board[targetRank][targetFile];
-        // if (target == null || target.player != player){
-        //     hasMoved= true;
-        //     return true;
-        // }
-
-        // return false;
         // Checking if target is occupied by same color piece
         Piece target = board.board[targetRank][targetFile];
         if (target != null && target.player == player) return false; // Can't capture own piece
 
-        // ✅ Move the rook (actually update the board)
-        board.board[rank][file] = null;  // Clear old position
-        board.board[targetRank][targetFile] = this;  // Place rook in new position
+        // Move the rook (actually update the board)
+        board.board[rank][file] = null;
+        board.board[targetRank][targetFile] = this;
 
-        // ✅ Update the position
+        // Update the position
         rank = targetRank;
         file = targetFile;
 
-        // ✅ Mark as moved
+        // Mark as moved
         hasMoved = true;
         return true;
     }
