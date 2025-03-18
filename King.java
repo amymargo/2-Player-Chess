@@ -18,7 +18,7 @@ public class King extends Piece {
             // }
             if (!hasMoved){
                 boolean castleSuccess = Castle(targetRank, targetFile, board);
-                if (!castleSuccess) return false; // ✅ Prevents setting `hasMoved` on failed castling
+                if (!castleSuccess) return false; // Prevents setting `hasMoved` on failed castling
                 return true;
             }            
             return false;
@@ -34,6 +34,7 @@ public class King extends Piece {
         
         return true;
     }
+    
     public boolean Castle(int targetRank, int targetFile, Board board){
         // Checking to see if King is moving ranks
         if ((targetRank != 0 && player) && (targetRank != 7 && !player)){
@@ -48,8 +49,6 @@ public class King extends Piece {
         if (!player && board.isKingInCheck() == 2) {
             return false;
         }
-
-        // c or g
 
         // Checking which corner of rook to castle with
         int rookCorner;
