@@ -271,15 +271,9 @@ public class Board extends ReturnPlay{
        previousMove[2] = endRank;
        previousMove[3] = endFile;
 
-        // // Switching turns
-        // if (whiteTurn) whiteTurn = false;
-        // else whiteTurn = true;
-
         // Checking for checks
         int check = isKingInCheck();
         if (check == 1 || check == 2) return ReturnPlay.Message.CHECK;
-
-        // Check for checkmate
 
         // Check for draw
         if (special != null && special.equals("draw?")) return ReturnPlay.Message.DRAW;
