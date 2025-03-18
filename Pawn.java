@@ -43,9 +43,7 @@ public class Pawn extends Piece{
             }
             return false;
         }
-
-        // En passant
-
+        
         return false;
     }
 }
